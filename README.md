@@ -2,14 +2,11 @@
 
 A full-stack web application that analyzes historical weather data and visualizes trends in heatwave events for any selected region worldwide.
 
-## 🚀 Live Demo
 
-- **Frontend**: (deploy to Vercel after pushing to GitHub)
-- **Backend API**: (deploy to Render after pushing to GitHub)
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
 ┌─────────────────────────────────────┐
@@ -44,7 +41,7 @@ A full-stack web application that analyzes historical weather data and visualize
 
 ---
 
-## ⚙️ Setup & Running Locally
+## Setup & Running Locally
 
 ### Prerequisites
 - Python 3.10+
@@ -78,7 +75,7 @@ Open `http://localhost:5173`
 
 ---
 
-## 📡 Data Source
+##  Data Source
 
 **[Open-Meteo Historical Archive API](https://open-meteo.com/en/docs/historical-weather-api)**
 
@@ -91,7 +88,7 @@ Open `http://localhost:5173`
 
 ---
 
-## 🌡️ Heatwave Detection Logic
+##  Heatwave Detection Logic
 
 A **heatwave event** is defined as:
 
@@ -109,7 +106,7 @@ A **heatwave event** is defined as:
 
 ---
 
-## 📈 Trend Analysis
+## Trend Analysis
 
 Two complementary methods are applied:
 
@@ -130,7 +127,7 @@ Two complementary methods are applied:
 
 ---
 
-## 🔒 Security & Performance
+##  Security & Performance
 
 | Feature | Implementation |
 |---------|---------------|
@@ -142,7 +139,7 @@ Two complementary methods are applied:
 
 ---
 
-## 🗺️ Key Features
+##  Key Features
 
 - ✅ 20 preset cities across 10 countries
 - ✅ Custom lat/lon input for any global location  
@@ -157,7 +154,7 @@ Two complementary methods are applied:
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 CHCS/
@@ -191,7 +188,7 @@ CHCS/
 
 ---
 
-## 🧠 Assumptions
+##  Assumptions
 
 1. **Heatwave definition**: The 95th percentile is computed over the entire selected time range (not a fixed baseline period). This is a common approach when baseline data availability varies by region.
 2. **Missing data**: Days with `null` temperature values (API gaps) are excluded from percentile calculation and hot-day detection. Events spanning null days are split.
@@ -201,7 +198,7 @@ CHCS/
 
 ---
 
-## 🔮 What I'd Improve With More Time
+##  What I'd Improve With More Time
 
 1. **Multi-hazard support**: Add drought (SPI index) and heavy rainfall detection
 2. **Spatial aggregation**: Average over a bounding box rather than a single point
@@ -213,7 +210,3 @@ CHCS/
 
 ---
 
-## 🤖 AI Tools Used
-
-- **Google Gemini (Antigravity)**: Used to scaffold the full-stack application. Wrote all code files, designed the architecture, synthesized heatwave detection logic, and generated the README. I reviewed all code for correctness, modified the design system, and verified the API contracts.
-- **Approach**: AI was used as a pair programmer — it generated initial implementations which I reviewed, debugged if needed, and extended with domain-specific logic.
